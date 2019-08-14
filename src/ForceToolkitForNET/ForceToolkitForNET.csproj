@@ -39,7 +39,7 @@
   <PropertyGroup>
     <PackageId>DeveloperForce.Force</PackageId>
     <Title>DeveloperForce.Force</Title>
-    <Version>2.0.7</Version>
+    <Version>2.1.0</Version>
     <Authors>wadewegner</Authors>
     <Description>The DeveloperForce.Force NuGet provides a .NET library for interacting with Salesforce Lightning REST APIs.</Description>
     <PackageLicenseUrl>https://raw.github.com/developerforce/Force.com-Toolkit-for-NET/master/LICENSE</PackageLicenseUrl>
@@ -51,6 +51,7 @@
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\ForceTookitForNet.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonLibrariesForNET\CommonLibrariesForNET.csproj" PrivateAssets="All" />
@@ -60,7 +61,7 @@
   </ItemGroup>
   <Target Name="IncludeSalesforceCommon">
     <ItemGroup>
-      <BuildOutputInPackage Include="$(OutputPath)\Salesforce.Common.dll" />
+      <BuildOutputInPackage Include="$(OutputPath)Salesforce.Common.dll" />
     </ItemGroup>
   </Target>
 </Project>
